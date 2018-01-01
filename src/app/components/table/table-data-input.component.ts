@@ -16,10 +16,8 @@ export class TableDataInputComponent {
     currentRow;
     currentField;
     @Output() saveTableData: EventEmitter<any> = new EventEmitter();
-    // @Output() closeAllInputs: EventEmitter<any> = new EventEmitter();
 
     openInput(columnField, row): void {
-        // this.closeAllInputs.emit();
         this.currentRow = row;
         this.currentField = columnField;
     }
