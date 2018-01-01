@@ -3,7 +3,6 @@ import { DataService } from '../../services/data-service';
 import { Observable } from 'rxjs/Observable';
 import { Record } from '../../models/record';
 
-
 @Component({
     selector: 'app-table-data-input',
     templateUrl: './table-data-input.component.html'
