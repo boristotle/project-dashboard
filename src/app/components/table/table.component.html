@@ -1,0 +1,42 @@
+<table>
+    <tr>
+        <th *ngFor="let item of columnItems">
+            {{item}}
+        </th>
+    </tr>
+    <tr>
+        <td *ngFor="let item of columnItems">
+            <input type="text" (keyup)="onInputChange.emit({filter: item, value: $event.target.value})"/>
+        </td>
+    </tr>
+    <tr *ngFor="let data of tableData; let row = index">
+        <td>{{data.title}}</td>
+        <td>{{data.division}}</td>
+        <td>
+            <app-table-data-input 
+                (saveTableData)="saveTableData.emit($event)"
+                [filterField]="'project_owner'" 
+                [data]="data.project_owner" 
+                [row]="row" >
+            </app-table-data-input>
+        </td>
+        <td>
+            <app-table-data-input 
+                (saveTableData)="saveTableData.emit($event)"
+                [filterField]="'budget'"
+                [data]="data.budget"
+                [row]="row">$
+            </app-table-data-input>
+        </td>
+        <td>
+            <app-table-data-input
+                (saveTableData)="saveTableData.emit($event)"
+                [filterField]="'status'"
+                [data]="data.status"
+                [row]="row">
+            </app-table-data-input>
+        </td>
+        <td>{{data.created}}</td>
+        <td>{{data.modified}}</td>
+    </tr>
+</table>

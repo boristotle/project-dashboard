@@ -1,0 +1,7 @@
+<app-table 
+    (onInputChange)="filterTableData($event)"
+    (saveTableData)="saveTableData($event)"
+    [tableData]="tableData"
+    [columnItems]="columnItems">
+</app-table>
+<app-stats [tableData]="tableData"></app-stats>

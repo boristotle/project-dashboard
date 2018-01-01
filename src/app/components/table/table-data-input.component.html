@@ -1,0 +1,7 @@
+<span *ngIf="currentRow  !== row || currentField !== filterField" (click)="openInput(filterField, row)">
+    <ng-content></ng-content>{{data}}
+</span>
+<span *ngIf="currentRow  === row && currentField === filterField">
+    <input type="text" value="{{data}}" 
+            (keyup.enter)="saveTableData.emit({row: row, filter: filterField, value: $event.target.value}); closeInput(filterField, row)"/>
+</span>
