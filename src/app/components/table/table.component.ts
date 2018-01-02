@@ -13,5 +13,4 @@ export class TableComponent {
     @Input() columnItems: string[];
     @Output() onInputChange: EventEmitter<any> = new EventEmitter();
     @Output() saveTableData: EventEmitter<any> = new EventEmitter();
-    @Output() openInput: EventEmitter<any> = new EventEmitter();
 }
