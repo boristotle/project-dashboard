@@ -7,18 +7,21 @@ import { DataService } from './services/data-service';
 import { HttpModule } from '@angular/http';
 import { TableDataInputComponent } from './components/table/table-data-input.component';
 import { StatsComponent } from './components/stats/stats.component';
-
+import { AppRoutingModule } from './app.routing';
+import { RecordDetailComponent } from './components/record-detail/record-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     TableDataInputComponent,
-    StatsComponent
+    StatsComponent,
+    RecordDetailComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

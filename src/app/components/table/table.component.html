@@ -10,7 +10,7 @@
         </td>
     </tr>
     <tr *ngFor="let data of tableData; let row = index">
-        <td>{{data.title}}</td>
+        <td><a [routerLink]="['record-detail']">{{data.title}}</a></td>
         <td>{{data.division}}</td>
         <td>
             <app-table-data-input 
