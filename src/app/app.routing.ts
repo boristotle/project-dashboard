@@ -1,10 +1,9 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RecordDetailComponent } from './components/record-detail/record-detail.component';
 
 
-const routes: Routes = [
-	{
+const routes: Routes = [{
        path: 'record-detail',
        pathMatch: 'full',
        component: RecordDetailComponent
@@ -12,11 +11,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [ 
-            RouterModule.forRoot(routes, {useHash: true}) 
+    imports: [
+            RouterModule.forRoot(routes, {useHash: true})
     ],
-    exports: [ 
-            RouterModule 
+    exports: [
+            RouterModule
     ]
   })
-  export class AppRoutingModule{ } 
+  export class AppRoutingModule {}

@@ -6,7 +6,7 @@
     </tr>
     <tr>
         <td *ngFor="let item of columnItems">
-            <input type="text" (keyup)="onInputChange.emit({filter: item, value: $event.target.value})"/>
+            <input type="text" (keyup)="inputChange.emit({filter: item, value: $event.target.value})"/>
         </td>
     </tr>
     <tr *ngFor="let data of tableData; let row = index">
